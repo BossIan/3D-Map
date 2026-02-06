@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="src/jquery.wayfinding.min.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #panorama {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+        }
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": "./test3.jpg"
+        });
+        $(document).ready(function () {
+            'use strict';
+            $('#map').wayfinding({
+                'maps': [
+                    { 'path': 'test/fixtures/try.svg', 'id': 'floor1' },
+                    { 'path': 'test/fixtures/demo_map_2.svg', 'id': 'floor2' }
+                ],
+                'path': {
+                    width: 3,
+                    color: 'red',
+                    radius: 8,
+                    speed: 0
+                },
+                'startpoint': function () {
+                    return 'R103';
+                },
+                'defaultMap': 'floor1',
+                'showLocation': false,
+                'zoomToRoute': false, 
+            }, function () {
+                console.log('callback reached');
+            });
+        })
+    </script>
+
+</body>
+
+</html>

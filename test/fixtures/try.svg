@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+
+    <!-- Background -->
+    <rect width="800" height="500" fill="#f5f5f5" />
+
+    <!-- Hallway -->
+    <rect id="hallway_main" x="100" y="200" width="600" height="100" fill="#dddddd" stroke="#999" stroke-width="2" />
+
+    <!-- ROOMS -->
+    <g id="Rooms">
+        <a id="R101_1">
+            <rect x="100" y="120" width="120" height="80" fill="#fff" stroke="#000" />
+        </a>
+        <a id="R102_1">
+            <rect x="240" y="120" width="120" height="80" fill="#fff" stroke="#000" />
+        </a>
+        <a id="R103_1">
+            <rect x="380" y="120" width="120" height="80" fill="#fff" stroke="#000" />
+        </a>
+        <a id="R104_1">
+            <rect x="520" y="120" width="120" height="80" fill="#fff" stroke="#000" />
+        </a>
+
+        <a id="R105_1">
+            <rect x="100" y="300" width="120" height="80" fill="#fff" stroke="#000" />
+        </a>
+        <a id="R106_1">
+            <rect x="240" y="300" width="120" height="80" fill="#fff" stroke="#000" />
+        </a>
+        <a id="R107_1">
+            <rect x="380" y="300" width="120" height="80" fill="#fff" stroke="#000" />
+        </a>
+        <a id="R108_1">
+            <rect x="520" y="300" width="120" height="80" fill="#fff" stroke="#000" />
+        </a>
+    </g>
+
+    <!-- DOORS -->
+    <g id="Doors">
+        <line id="R101_1" x1="160" y1="200" x2="160" y2="210" stroke="blue" />
+        <line id="R102_1" x1="300" y1="200" x2="300" y2="210" stroke="blue" />
+        <line id="R103_1" x1="440" y1="200" x2="440" y2="210" stroke="blue" />
+        <line id="R104_1" x1="580" y1="200" x2="580" y2="210" stroke="blue" />
+
+        <line id="R105_1" x1="160" y1="300" x2="160" y2="290" stroke="blue" />
+        <line id="R106_1" x1="300" y1="300" x2="300" y2="290" stroke="blue" />
+        <line id="R107_1" x1="440" y1="300" x2="440" y2="290" stroke="blue" />
+        <line id="R108_1" x1="580" y1="300" x2="580" y2="290" stroke="blue" />
+    </g>
+
+    <!-- PATH NETWORK (BROKEN INTO NODES) -->
+    <g id="Paths">
+        <!-- Top hallway -->
+        <line x1="160" y1="210" x2="300" y2="210" stroke="black" />
+        <line x1="300" y1="210" x2="440" y2="210" stroke="black" />
+        <line x1="440" y1="210" x2="580" y2="210" stroke="black" />
+
+        <!-- Bottom hallway -->
+        <line x1="160" y1="290" x2="300" y2="290" stroke="black" />
+        <line x1="300" y1="290" x2="440" y2="290" stroke="black" />
+        <line x1="440" y1="290" x2="580" y2="290" stroke="black" />
+
+        <!-- Vertical connectors -->
+        <line x1="160" y1="210" x2="160" y2="290" stroke="black" />
+        <line x1="300" y1="210" x2="300" y2="290" stroke="black" />
+        <line x1="440" y1="210" x2="440" y2="290" stroke="black" />
+        <line x1="580" y1="210" x2="580" y2="290" stroke="black" />
+    </g>
+
+
+</svg>
