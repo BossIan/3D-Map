@@ -43,7 +43,6 @@ app.post("/login", async function (req, res) {
   const user =  await account.findOne({ username: username });
 
   if (user && password === user.password) {
-    console.log(user.role);
     res.json({ success: true , role: user.role});
   } else {
     res.status(401).json({ success: false, message: "Invalid credentials" });

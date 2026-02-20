@@ -10,7 +10,6 @@ function App() {
     const form = e.currentTarget;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
-    console.log(data);
     try {
       const response = await fetch("http://localhost:5000/login", {
         method: "POST",
